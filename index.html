@@ -13,7 +13,8 @@
     <div class="w3-top">
       <div class="w3-bar w3-black">
         <span class="branding w3-bar-item w3-mobile">ACME Web Services</span>
-        <span class="w3-right w3-mobile">
+           <a class="w3-bar-item w3-button w3-mobile w3-hover-red"><i class="hamburger fa fa-bars" onclick="navToggle()"></i></a>
+        <span class="w3-right w3-mobile" id="myLinks">
           <a class="w3-bar-item w3-button w3-mobile w3-hover-red" href="#">Home</a>
           <a class="w3-bar-item w3-button w3-mobile w3-hover-red" href="#about">About</a>
           <a class="w3-bar-item w3-button w3-mobile w3-hover-red" href="#services">Services</a>
@@ -61,13 +62,13 @@
             <button onclick="accFunction('what')" class="w3-btn-block w3-left-align">
             What We Do</button>
 
-            <div id="what" class="w3-container w3-show">
+            <div id="what" class="w3-container w3-hide">
               <h3>We Do It All</h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             </div>
 
             <button onclick="accFunction('who')" class="w3-btn-block w3-left-align">
-            What We Do</button>
+            Who We Are</button>
 
             <div id="who" class="w3-container w3-hide">
               <h3>We Are Acme</h3>
@@ -75,7 +76,7 @@
             </div>
 
             <button onclick="accFunction('where')" class="w3-btn-block w3-left-align">
-            What We Do</button>
+            Where Are We?</button>
 
             <div id="where" class="w3-container w3-hide">
               <h3>We Are Everywhere</h3>
@@ -192,6 +193,23 @@
               x.className = x.className.replace(" w3-show", "");
           }
       }
+        
+        function navToggle() {
+        var x = document.getElementById("myLinks");
+            var y = document.getElementsByTagName("body")[0];
+            var z = false;
+        if (x.style.display === "block") {
+        x.style.display = "none";
+        } else {
+        x.style.display = "block";
+            z = true;
+  } 
+            if(z === true){
+                y.style.margin = "160px 0 0 0";
+            } else {
+                y.style.margin = "0";
+            }
+}
       </script>
   </body>
 </html>
