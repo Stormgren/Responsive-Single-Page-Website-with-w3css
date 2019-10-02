@@ -1,6 +1,7 @@
 .hamburger{
     display: none;
-    }
+}
+  
 .myLinks{
     display: block;
 }
@@ -53,19 +54,17 @@
 }
 
 @media only screen and (max-width:600px){
-  body{
-    /*margin-top:190px;
-  */}
 
   .showcase{
     height:400px;
     padding: 60px 0;
   }
     
-    .hamburger{
-        display: block;
-    }
-   #myLinks{
-        display: none;
-    }
+  .hamburger{
+     display: block;
+  }
+
+  #myLinks{
+     display: none;
+  }
 }
